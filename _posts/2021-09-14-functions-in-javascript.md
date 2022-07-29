@@ -61,5 +61,8 @@ console.log(appleJuice);
 
 `const appleJuice = fruitProcessor(5, 0);` //To us e returned value, we can capture the value in a variable (not mandatory).
 
+Further reading - 
+
+[Functions in JavaScript](https://www.scaler.com/topics/javascript/javascript-functions/)
 
 
