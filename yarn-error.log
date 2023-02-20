@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/jhl/.nvm/versions/node/v14.17.0/bin/node /Users/jhl/.nvm/versions/node/v14.17.0/bin/yarn dev -p 8000
+
+PATH: 
+  /Users/jhl/.nvm/versions/node/v14.17.0/bin:/Users/jhl/.rbenv/bin:/Users/jhl/.rbenv/shims:/Users/jhl/.rbenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.17.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Volumes/Macintosh HD - Workplace/mydevblog/mydevblog/package.json: Unexpected number in JSON at position 256
+      at JSON.parse (<anonymous>)
+      at /Users/jhl/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/jhl/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/jhl/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "mydevblog",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+  	"deploy": "npm run build && npm run export"
+    },
+    "dependencies": {
+  	  ---
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
