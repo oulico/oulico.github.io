@@ -5,20 +5,6 @@ exports.id = 405;
 exports.ids = [405];
 exports.modules = {
 
-/***/ 3918:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/amp-context.js");
-
-/***/ }),
-
-/***/ 5732:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/amp-mode.js");
-
-/***/ }),
-
 /***/ 3280:
 /***/ ((module) => {
 
@@ -37,34 +23,6 @@ module.exports = require("next/dist/shared/lib/head-manager-context.js");
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
-
-/***/ }),
-
-/***/ 4486:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-blur-svg.js");
-
-/***/ }),
-
-/***/ 744:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-config-context.js");
-
-/***/ }),
-
-/***/ 5843:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-config.js");
-
-/***/ }),
-
-/***/ 9552:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/image-loader");
 
 /***/ }),
 
@@ -208,24 +166,10 @@ module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
 
 /***/ }),
 
-/***/ 2470:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/side-effect.js");
-
-/***/ }),
-
 /***/ 9232:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/utils.js");
-
-/***/ }),
-
-/***/ 618:
-/***/ ((module) => {
-
-module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
@@ -275,8 +219,6 @@ var jsx_runtime_ = __webpack_require__(997);
 var style_ = __webpack_require__(9816);
 ;// CONCATENATED MODULE: external "next/head"
 const head_namespaceObject = require("next/head");
-// EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__(5675);
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__(1664);
 // EXTERNAL MODULE: ./lib/getPostsMetaData.js
@@ -287,84 +229,71 @@ var getPostsMetaData = __webpack_require__(533);
 
 
 
-
 function Home({ postsData  }) {
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        className: "jsx-967038ba3f79b229" + " " + "info-container",
+        className: "jsx-1ee25fe49c518e47" + " " + "info-container",
         children: [
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(head_namespaceObject, {
                 children: [
                     /*#__PURE__*/ jsx_runtime_.jsx("title", {
-                        className: "jsx-967038ba3f79b229",
+                        className: "jsx-1ee25fe49c518e47",
                         children: "Coding between lines"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("meta", {
                         name: "description",
                         content: "Front-end Dev Blog",
-                        className: "jsx-967038ba3f79b229"
+                        className: "jsx-1ee25fe49c518e47"
                     })
                 ]
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("picture", {
-                className: "jsx-967038ba3f79b229",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("source", {
-                        srcSet: require("/images/anita.jpeg"),
-                        type: "image/webp",
-                        className: "jsx-967038ba3f79b229"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("source", {
-                        srcSet: require("/images/anita.jpeg"),
-                        type: "image/jpeg",
-                        className: "jsx-967038ba3f79b229"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                        src: "/images/anita.jpeg",
-                        className: "jsx-967038ba3f79b229"
-                    })
-                ]
+            /*#__PURE__*/ jsx_runtime_.jsx("picture", {
+                className: "jsx-1ee25fe49c518e47",
+                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    src: "../public/images/anita.jpeg",
+                    className: "jsx-1ee25fe49c518e47"
+                })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                className: "jsx-967038ba3f79b229" + " " + "info-description",
+                className: "jsx-1ee25fe49c518e47" + " " + "info-description",
                 children: "Hi I'm Batman, the saviour of Gotham City and I like to roam in nights to bash the bad guys."
             }),
             /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
-                className: "jsx-967038ba3f79b229" + " " + "info-description",
+                className: "jsx-1ee25fe49c518e47" + " " + "info-description",
                 children: [
                     "But please don't call me as a source for ",
                     /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                        className: "jsx-967038ba3f79b229",
+                        className: "jsx-1ee25fe49c518e47",
                         children: "Corona Virus"
                     }),
                     " and it could be the ",
                     /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                        className: "jsx-967038ba3f79b229",
+                        className: "jsx-1ee25fe49c518e47",
                         children: "Joker"
                     }),
                     " who might have started this mess."
                 ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("hr", {
-                className: "jsx-967038ba3f79b229"
+                className: "jsx-1ee25fe49c518e47"
             }),
             postsData.map((metadata)=>{
                 return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "jsx-967038ba3f79b229",
+                    className: "jsx-1ee25fe49c518e47",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx(next_link, {
                             href: `/blog/${metadata.id}`,
                             children: metadata.title
                         }, metadata.title),
                         /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                            className: "jsx-967038ba3f79b229" + " " + "post-description",
+                            className: "jsx-1ee25fe49c518e47" + " " + "post-description",
                             children: metadata.description
                         })
                     ]
                 }, metadata.id);
             }),
             jsx_runtime_.jsx(style_, {
-                id: "967038ba3f79b229",
-                children: ".info-container.jsx-967038ba3f79b229{margin:0 5%0 5%}img.jsx-967038ba3f79b229{width:20%;max-width:20%;height:auto;margin-left:40%}.info-description.jsx-967038ba3f79b229{font-size:20px}"
+                id: "1ee25fe49c518e47",
+                children: ".info-container.jsx-1ee25fe49c518e47{margin:0 5%0 5%}img.jsx-1ee25fe49c518e47{width:20%;max-width:20%;height:auto;margin-left:40%}.info-description.jsx-1ee25fe49c518e47{font-size:20px}"
             })
         ]
     });
@@ -388,7 +317,7 @@ async function getStaticProps() {
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [121,932,676,61,533], () => (__webpack_exec__(9814)));
+var __webpack_exports__ = __webpack_require__.X(0, [210,932,676,664,533], () => (__webpack_exec__(9814)));
 module.exports = __webpack_exports__;
 
 })();
