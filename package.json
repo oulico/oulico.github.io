@@ -11,6 +11,9 @@
 		"export": "next export",
 		"deploy": "next build && next export"
 	},
+	"engines": {
+		"node": ">=14.15.0"
+	},
 	"type": "module",
 	"dependencies": {
 		"@mdx-js/loader": "^2.3.0",
@@ -31,10 +34,12 @@
 		"react-dom": "^18.2.0",
 		"sharp": "^0.31.3",
 		"url-loader": "^4.1.1",
+		"uuid": "7",
 		"webp-loader": "^0.6.0",
 		"webpack": "^5.75.0"
 	},
 	"devDependencies": {
+		"node": "16",
 		"webpack-cli": "^5.0.1"
 	}
 }
