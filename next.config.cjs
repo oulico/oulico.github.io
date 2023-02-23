@@ -88,7 +88,7 @@ module.exports = withPlugins(
     [
       optimizedImages,
       {
-        optimizeImages: false,
+        optimizeImages: true,
       },
     ],
   ],
