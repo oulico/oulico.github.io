@@ -21,9 +21,9 @@ jobs:
 
       - name: Install and Build
         uses: actions/setup-node@v1
-      - run: yarn install
-      - run: yarn build
-      - run: yarn export
+      - run: npm install
+      - run: npm build
+      - run: npm export
         env:
             CI: true
       - run: touch out/.nojekyll
