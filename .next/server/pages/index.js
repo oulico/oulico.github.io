@@ -249,7 +249,7 @@ function Home({ postsData  }) {
             /*#__PURE__*/ jsx_runtime_.jsx("picture", {
                 className: "jsx-1ee25fe49c518e47",
                 children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                    src: "../public/images/anita.jpeg",
+                    src: "./images/anita.jpeg",
                     className: "jsx-1ee25fe49c518e47"
                 })
             }),
@@ -281,7 +281,7 @@ function Home({ postsData  }) {
                     className: "jsx-1ee25fe49c518e47",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx(next_link, {
-                            href: `/blog/${metadata.id}`,
+                            href: `./blog/${metadata.id}`,
                             children: metadata.title
                         }, metadata.title),
                         /*#__PURE__*/ jsx_runtime_.jsx("p", {

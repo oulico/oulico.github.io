@@ -93,14 +93,19 @@ const nextConfig = {
 	},
 	pageExtensions: ['js', 'jsx', 'md', 'mdx'],
 	target: 'serverless',
-	exportPathMap: function () {
+	exportPathMap: async function (
+		defaultPathMap,{ dev, dir, outDir, distDirt, buildId}
+
+	) {
 		return {
 			'/': { page: '/' },
 			'/about': { page: '/about' },
+			'/blog' : {page: '/blog'}
 		}
+	
 	},
-	basePath: ghPages? '/oulico.github.io/' : '',
-	assetPrefix: ghPages ? '/oulico.github.io/' : '',
+	basePath: ghPages? '/oulicoblog/' : '',
+	assetPrefix: ghPages ? '/oulicoblog/' : '',
 }
 
 module.exports = withPlugins([

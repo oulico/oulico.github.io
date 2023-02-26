@@ -4,7 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f91528-72fe-480b-aca6-81c4c036d8a1" name="변경" comment="" />
+    <list default="true" id="d4f91528-72fe-480b-aca6-81c4c036d8a1" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/BUILD_ID" beforeDir="false" afterPath="$PROJECT_DIR$/.next/BUILD_ID" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/next-server.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/server-production/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/export-detail.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/export-detail.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/next-server.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/prerender-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/prerender-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/required-server-files.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/required-server-files.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/routes-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/routes-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/middleware-build-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_app.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/_app.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_document.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/_document.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/_error.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/_error.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/blog/[id].js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/blog/[id].js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/blog/batman-vs-superman.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/blog/batman-vs-superman.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/blog/justice-league.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/blog/justice-league.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/index.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/index.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/4vN4hRcDPz64stZ3Fa_H-/_buildManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/4vN4hRcDPz64stZ3Fa_H-/_ssgManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/chunks/pages/index-2b37e07a9a5998f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/.next/trace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/data/4vN4hRcDPz64stZ3Fa_H-/blog/batman-vs-superman.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/data/4vN4hRcDPz64stZ3Fa_H-/blog/justice-league.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/data/4vN4hRcDPz64stZ3Fa_H-/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/4vN4hRcDPz64stZ3Fa_H-/_buildManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/4vN4hRcDPz64stZ3Fa_H-/_ssgManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/index-2b37e07a9a5998f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/blog/batman-vs-superman.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/blog/batman-vs-superman.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/blog/justice-league.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/blog/justice-league.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +99,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "14.17.0",
+    "javascript.nodejs.core.library.typings.version": "14.17.0",
+    "last_opened_file_path": "/Volumes/Macintosh HD - Workplace/mydevblog/mydevblog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677053347257</updated>
       <workItem from="1677053381487" duration="1458000" />
+      <workItem from="1677379345266" duration="722000" />
     </task>
     <servers />
   </component>
