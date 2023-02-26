@@ -101,6 +101,9 @@ const nextConfig = {
   },
   basePath: ghPages ? '/oulicoblog/' : '',
   assetPrefix: ghPages ? '/oulicoblog/' : '',
+  experimental: {
+	  reactRefresh: true,
+  }
 };
 
 module.exports = withPlugins(

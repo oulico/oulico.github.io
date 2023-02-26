@@ -249,29 +249,13 @@ function Home({ postsData  }) {
             /*#__PURE__*/ jsx_runtime_.jsx("picture", {
                 className: "jsx-1ee25fe49c518e47",
                 children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                    src: "./images/anita.jpeg",
+                    src: "./images/background001.jpg",
                     className: "jsx-1ee25fe49c518e47"
                 })
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("p", {
                 className: "jsx-1ee25fe49c518e47" + " " + "info-description",
-                children: "Hi I'm Batman, the saviour of Gotham City and I like to roam in nights to bash the bad guys."
-            }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
-                className: "jsx-1ee25fe49c518e47" + " " + "info-description",
-                children: [
-                    "But please don't call me as a source for ",
-                    /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                        className: "jsx-1ee25fe49c518e47",
-                        children: "Corona Virus"
-                    }),
-                    " and it could be the ",
-                    /*#__PURE__*/ jsx_runtime_.jsx("b", {
-                        className: "jsx-1ee25fe49c518e47",
-                        children: "Joker"
-                    }),
-                    " who might have started this mess."
-                ]
+                children: "Exploring the intersection of technology and culture through the eyes of a creative front-end developer"
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("hr", {
                 className: "jsx-1ee25fe49c518e47"
@@ -281,7 +265,7 @@ function Home({ postsData  }) {
                     className: "jsx-1ee25fe49c518e47",
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx(next_link, {
-                            href: `./blog/${metadata.id}`,
+                            href: `/blog/${metadata.id}`,
                             children: metadata.title
                         }, metadata.title),
                         /*#__PURE__*/ jsx_runtime_.jsx("p", {

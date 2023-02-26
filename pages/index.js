@@ -10,15 +10,11 @@ export default function Home({ postsData }) {
         <meta name="description" content="Front-end Dev Blog" />
       </Head>
       <picture>
-        <img src="./images/anita.jpeg" />
+        <img src="./images/background001.jpg" />
       </picture>
       <p className="info-description">
-        Hi I'm Batman, the saviour of Gotham City and I like to roam in nights
-        to bash the bad guys.
-      </p>
-      <p className="info-description">
-        But please don't call me as a source for <b>Corona Virus</b> and it
-        could be the <b>Joker</b> who might have started this mess.
+        Exploring the intersection of technology and culture through the eyes of
+        a creative front-end developer
       </p>
       <hr />
 
