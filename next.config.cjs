@@ -72,7 +72,7 @@
 //  ],
 //  withCustomImageOptimizer()
 //);
-const path = require("path");
+const path = require('path');
 const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
 
 const withPlugins = require('next-compose-plugins');
@@ -84,30 +84,33 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.node = {
-        fs: 'empty'
-      }
+        fs: 'empty',
+      };
     }
-    config.resolve.alias.images = path.join(__dirname, "images");
-    return config
+    config.resolve.alias.images = path.join(__dirname, 'images');
+    return config;
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   target: 'serverless',
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
+  exportPathMap: function () {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
-      '/blog': { page: '/blog' }
-    }
+      '/blog': { page: '/blog' },
+    };
   },
-  basePath: '/oulicoblog',
-  assetPrefix: '/oulicoblog/'
-}
+  basePath: ghPages ? '/oulicoblog/' : '',
+  assetPrefix: ghPages ? '/oulicoblog/' : '',
+};
 
-module.exports = withPlugins([
-  [MDX, {
-    extension: /\.mdx?$/,
-  }]
-], nextConfig)
+module.exports = withPlugins(
+  [
+    [
+      MDX,
+      {
+        extension: /\.mdx?$/,
+      },
+    ],
+  ],
+  nextConfig
+);
