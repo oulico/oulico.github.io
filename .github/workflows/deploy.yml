@@ -17,12 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: 'bun'
-          cache-dependency-path: 'package.json'
+      - uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
         run: bun install
