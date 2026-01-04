@@ -5,51 +5,65 @@ interface MermaidRendererProps {
   chart: string; // The Mermaid code as a string
 }
 
+// Initialize Mermaid once
+mermaid.initialize({
+  startOnLoad: false, // We will manually start rendering
+  theme: 'dark', // Align with our dark theme
+  securityLevel: 'loose', // Allow external resources if needed, or set to 'strict'
+  fontFamily: 'D2Coding, monospace', // Ensure Mermaid uses the custom font
+});
+
+// Helper to decode HTML entities
+const decodeHtmlEntities = (text: string): string => {
+  if (typeof window === 'undefined') {
+    // Basic decoding for server-side or non-browser environments
+    return text.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+  }
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+};
+
+
 const MermaidRenderer: React.FC<MermaidRendererProps> = ({ chart }) => {
   const chartRef = useRef<HTMLDivElement>(null);
+  const [svg, setSvg] = React.useState<string | null>(null);
+  const [error, setError] = React.useState<string | null>(null);
 
   useEffect(() => {
-    if (chartRef.current) {
-      mermaid.initialize({
-        startOnLoad: false, // We will manually start rendering
-        theme: 'dark', // Align with our dark theme
-        securityLevel: 'loose', // Allow external resources if needed, or set to 'strict'
-        fontFamily: 'D2Coding, monospace', // Ensure Mermaid uses the custom font
-      });
-
+    const renderMermaid = async () => {
       try {
-        // Generate a unique ID for the chart to avoid conflicts
-        const chartId = 'mermaid-chart-' + Math.random().toString(36).substring(7);
+        // Decode the chart string to handle any HTML entities
+        const decodedChart = decodeHtmlEntities(chart);
         
-        // Render the chart to an SVG
-        mermaid.render(chartId, chart)
-          .then(({ svg }) => {
-            if (chartRef.current) {
-              // Append the SVG to the ref's current element
-              chartRef.current.innerHTML = svg;
-            }
-          })
-          .catch(error => {
-            console.error("Mermaid rendering failed:", error);
-            if (chartRef.current) {
-              chartRef.current.innerHTML = `<pre>${chart}</pre>`; // Fallback to raw code
-            }
-          });
-      } catch (error) {
-        console.error("Mermaid rendering failed synchronously:", error);
-        if (chartRef.current) {
-          chartRef.current.innerHTML = `<pre>${chart}</pre>`; // Fallback to raw code
-        }
+        // Generate a unique ID for rendering
+        const chartId = 'mermaid-chart-' + Math.random().toString(36).substring(7);
+
+        const { svg: renderedSvg } = await mermaid.render(chartId, decodedChart);
+        setSvg(renderedSvg);
+        setError(null);
+      } catch (e) {
+        console.error("Mermaid rendering failed:", e);
+        setError("Failed to render diagram. Please check the syntax.");
+        // Keep the raw code for debugging
+        setSvg(`<pre>${chart}</pre>`);
       }
-    }
-  }, [chart]); // Re-render if chart code changes
+    };
+
+    renderMermaid();
+  }, [chart]);
 
   return (
-    <div className="mermaid-chart-container" ref={chartRef} style={{textAlign: 'center', margin: '20px 0'}}>
+    <div 
+      className="mermaid-chart-container" 
+      ref={chartRef} 
+      style={{textAlign: 'center', margin: '20px 0'}}
+      dangerouslySetInnerHTML={{ __html: svg ?? 'Loading diagram...' }}
+    >
       {/* Mermaid.js will inject the SVG here */}
-      Loading diagram...
     </div>
   );
 };
 
 export default MermaidRenderer;
+
