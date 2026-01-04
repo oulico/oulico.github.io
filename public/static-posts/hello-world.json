@@ -1,0 +1,13 @@
+{
+  "slug": "hello-world",
+  "frontmatter": {
+    "title": "Hello, World!",
+    "date": "2026-01-03",
+    "category": "General",
+    "tags": [
+      "first-post",
+      "welcome"
+    ]
+  },
+  "content": "\n## Welcome to my new blog!\n\nThis is my very first post. I'm excited to start writing.\n\nHere is a code block:\n```javascript\nconsole.log(\"Hello, from the new blog!\");\n```\n\n\n\n## Mermaid Diagram Example\n\n```mermaid\ngraph TD\n    A[Start] --> B{Is it hot?};\n    B -- Yes --> C{Drink Water};\n    B -- No --> D{Eat Ice Cream};\n    C --> E[End];\n    D --> E;\n```\n\n"
+}

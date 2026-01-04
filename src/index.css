@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'D2Coding';
+  src: url('./assets/fonts/D2Coding.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'D2Coding', 'Courier New', Courier, monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --dark-navy: #0a192f;
+  --slate: #a8b2d1;
+  --light-slate: #ccd6f6;
+  --green: #64ffda;
+
+  color-scheme: dark;
+  color: var(--slate);
+  background-color: var(--dark-navy);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--light-slate);
+}
+
+a {
+  font-weight: 500;
+  color: var(--green);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+pre, code {
+  font-family: 'D2Coding', 'Courier New', Courier, monospace;
+}
+
+/* Styling for the post list on the main page */
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main li {
+  margin-bottom: 1.5rem; /* Increased spacing */
+}
+
+main li a {
+  display: block; /* Make the whole list item clickable */
+  color: var(--light-slate);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+main li a:hover {
+  color: var(--green);
+  text-decoration: none; /* No underline on hover for list items */
+}
+
+main li h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--light-slate); /* Ensure title color is consistent */
+}
+
+main li p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 0.9rem;
+}

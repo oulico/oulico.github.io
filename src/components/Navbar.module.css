@@ -1,0 +1,113 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 1rem;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navbarContent {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.title a {
+    text-decoration: none;
+    color: var(--green);
+}
+
+.navLinks {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+.navLinks a {
+    color: var(--light-slate);
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    color: var(--green);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+/* Mobile Menu Drawer */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(75vw, 400px);
+    height: 100vh;
+    background-color: #112240;
+    z-index: 1005;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileMenuOpen {
+    transform: translateX(0);
+}
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mobileMenu li {
+    margin-bottom: 2rem;
+}
+
+.mobileMenu a {
+    font-size: 1.5rem;
+    color: var(--light-slate);
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+    .navLinks {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+}
