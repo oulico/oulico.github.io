@@ -1,26 +1,34 @@
 import { useState, useEffect } from 'react';
 
-export const useScroll = (threshold: number = 10) => {
-  const [scrolled, setScrolled] = useState(false);
+export const useScrollDirection = (threshold: number = 0, offset: number = 10) => {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > threshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      const currentScrollY = window.scrollY;
+
+      // Always show navbar if at the very top
+      if (currentScrollY <= threshold) {
+        setShowNavbar(true);
       }
+      // Scrolling down
+      else if (currentScrollY > lastScrollY && currentScrollY > threshold + offset) {
+        setShowNavbar(false);
+      }
+      // Scrolling up
+      else if (currentScrollY < lastScrollY - offset) {
+        setShowNavbar(true);
+      }
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Initial check
-    handleScroll();
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [threshold]);
+  }, [threshold, offset, lastScrollY]);
 
-  return scrolled;
+  return showNavbar;
 };

@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import { getPost, type Post } from '../lib/posts';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import MermaidRenderer from '../components/MermaidRenderer'; // Import MermaidRenderer
 
+// Lazy load MermaidRenderer
+const MermaidRenderer = lazy(() => import('../components/MermaidRenderer'));
 
 import rehypeRaw from 'rehype-raw';
 import styles from './PostDetailPage.module.css'; // Import post-specific styles
@@ -52,7 +53,11 @@ const PostDetailPage: React.FC = () => {
               const language = match?.[1];
 
               if (language === 'mermaid') {
-                return <MermaidRenderer chart={String(children).replace(/\n$/, '')} />;
+                return (
+                  <Suspense fallback={<div>Loading Mermaid diagram...</div>}>
+                    <MermaidRenderer chart={String(children).replace(/\n$/, '')} />
+                  </Suspense>
+                );
               }
               
               return match ? (
