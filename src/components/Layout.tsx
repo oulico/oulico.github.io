@@ -1,8 +1,8 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import Header from './Header';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import TuiBox from './TuiBox';
 import styles from './Layout.module.css';
 
 interface LayoutProps {
@@ -10,19 +10,55 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ignore hotkeys if the user is typing in an input field
+      const target = event.target as HTMLElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable) {
+        return;
+      }
+
+      switch (event.key.toLowerCase()) {
+        case 'h':
+          navigate('/');
+          break;
+        case 't':
+          navigate('/tags');
+          break;
+        case 'a':
+          navigate('/about');
+          break;
+        // Add other hotkeys here if needed
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [navigate]);
 
   return (
-    <>
-      <Navbar show={true} />
-      {isHomePage && <Header />}
-      <main className={`${styles.mainContent} ${!isHomePage ? styles.mainContentPadded : ''}`}>
-        {children}
+    <div className={styles.tuiLayout}>
+      <TuiBox title="[N] Navigation">
+        <Navbar />
+      </TuiBox>
+      
+      <main className={styles.mainContent}>
+        <TuiBox title="[C] Content">
+          {children}
+        </TuiBox>
       </main>
-      <Footer />
-    </>
+
+      <TuiBox title="[F] Footer">
+        <Footer />
+      </TuiBox>
+    </div>
   );
 };
 
 export default Layout;
+
+
