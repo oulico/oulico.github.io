@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getPosts, type Post } from '../lib/posts';
+import Header from '../components/Header'; // Import the Header component
 
 const HomePage: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
+      <Header />
       <h1>Posts</h1>
       <ul>
         {posts.map((post) => (
