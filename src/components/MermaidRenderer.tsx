@@ -8,7 +8,31 @@ interface MermaidRendererProps {
 // Initialize Mermaid once
 mermaid.initialize({
   startOnLoad: false, // We will manually start rendering
-  theme: 'dark', // Align with our dark theme
+  theme: 'base', // Use the base theme to apply custom variables
+  themeVariables: {
+    // --- Base Colors ---
+    background: '#0a192f', // var(--dark-navy)
+    primaryColor: '#112240', // A slightly lighter navy for nodes
+    
+    // --- Text Colors ---
+    primaryTextColor: '#ccd6f6', // var(--light-slate) for titles and labels
+    secondaryTextColor: '#a8b2d1', // var(--slate) for general text
+    tertiaryTextColor: '#a8b2d1',
+
+    // --- Border and Line Colors ---
+    primaryBorderColor: '#64ffda', // var(--green) for node borders
+    lineColor: '#a8b2d1', // var(--slate) for connectors and arrows
+    
+    // --- Other Colors ---
+    secondaryColor: '#112240',
+    tertiaryColor: '#0a192f',
+    noteBkgColor: '#112240',
+    noteTextColor: '#ccd6f6',
+    textColor: '#ccd6f6',
+    mainBkg: '#112240',
+    errorBkgColor: '#5c2b2b',
+    errorTextColor: '#f8d7da',
+  },
   securityLevel: 'loose', // Allow external resources if needed, or set to 'strict'
   fontFamily: 'D2Coding, monospace', // Ensure Mermaid uses the custom font
 });

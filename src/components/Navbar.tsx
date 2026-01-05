@@ -3,7 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import TuiBox from './TuiBox';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  show: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ show }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -34,7 +38,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${show ? styles.show : ''}`}>
         <div className={styles.navbarContent}>
           <div className={styles.title}>
             <Link to="/">Click Moments</Link>

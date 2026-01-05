@@ -43,7 +43,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={styles.tuiLayout}>
       <TuiBox title="[N] Navigation">
-        <Navbar />
+        <Navbar show={true} />
       </TuiBox>
       
       <main className={styles.mainContent}>

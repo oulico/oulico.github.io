@@ -2,10 +2,25 @@
 .navbar {
     width: 100%;
     padding: 0.5rem 0;
+    position: fixed; /* Make it fixed */
+    top: -100px; /* Start off-screen */
+    left: 0;
+    right: 0;
+    transition: top 0.3s ease-in-out;
+    background-color: var(--dark-navy);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.show {
+    top: 0; /* Slide in */
 }
 
 .navbarContent {
     width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
