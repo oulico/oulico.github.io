@@ -13,9 +13,6 @@ export default defineConfig({
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'react-vendor';
             }
-            if (id.includes('mermaid')) {
-              return 'mermaid';
-            }
             // Catch all for other node_modules
             return 'vendor';
           }
