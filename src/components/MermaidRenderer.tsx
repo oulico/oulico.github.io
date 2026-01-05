@@ -28,7 +28,7 @@ const decodeHtmlEntities = (text: string): string => {
 const MermaidRenderer: React.FC<MermaidRendererProps> = ({ chart }) => {
   const chartRef = useRef<HTMLDivElement>(null);
   const [svg, setSvg] = React.useState<string | null>(null);
-  const [error, setError] = React.useState<string | null>(null);
+  const [_error, setError] = React.useState<string | null>(null);
 
   useEffect(() => {
     const renderMermaid = async () => {
