@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import TuiBox from './TuiBox';
 import styles from './Layout.module.css';
+import { useScrollDirection } from '../hooks/useScroll'; // Import useScrollDirection
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigate = useNavigate();
+  const showNavbar = useScrollDirection(80, 10); // Use the new hook
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -42,7 +44,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className={styles.tuiLayout}>
-      <Navbar show={true} />
+      <TuiBox title="[N] Navigation">
+        <Navbar show={showNavbar} />
+      </TuiBox>
       
       <main className={styles.mainContent}>
         <TuiBox title="[C] Content">
