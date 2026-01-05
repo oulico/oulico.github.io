@@ -7,12 +7,8 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <a href="https://github.com/oulico" target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
-          <pre>{`
- /\\_/\\
-( o.o )
- > ^ <
-`}</pre>
+        <a href="https://github.com/oulico" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+          <i className="nf nf-dev-github_badge"></i>
         </a>
         <p>© {currentYear} oulico</p>
       </div>

@@ -8,6 +8,9 @@ import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import MermaidRenderer from '../components/MermaidRenderer'; // Import MermaidRenderer
 
 
+import rehypeRaw from 'rehype-raw';
+import styles from './PostDetailPage.module.css'; // Import post-specific styles
+
 const PostDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<Post | undefined>(undefined);
@@ -38,33 +41,36 @@ const PostDetailPage: React.FC = () => {
       <h1>{post.frontmatter.title}</h1>
       <p>Category: {post.frontmatter.category} | Tags: {post.frontmatter.tags.join(', ')}</p>
       <hr />
-      <ReactMarkdown
-        children={post.content}
-        remarkPlugins={[remarkGfm]}
-        components={{
-          code({className, children}) {
-            const match = /language-(\w+)/.exec(className || '')
-            const language = match?.[1];
+      <div className={styles.postContent}>
+        <ReactMarkdown
+          children={post.content}
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            code({className, children}) {
+              const match = /language-(\w+)/.exec(className || '')
+              const language = match?.[1];
 
-            if (language === 'mermaid') {
-              return <MermaidRenderer chart={String(children).replace(/\n$/, '')} />;
+              if (language === 'mermaid') {
+                return <MermaidRenderer chart={String(children).replace(/\n$/, '')} />;
+              }
+              
+              return match ? (
+                <SyntaxHighlighter
+                  children={String(children).replace(/\n$/, '')}
+                  style={a11yDark as any}
+                  language={language}
+                  PreTag="div"
+                />
+              ) : (
+                <code className={className}>
+                  {children}
+                </code>
+              )
             }
-            
-            return match ? (
-              <SyntaxHighlighter
-                children={String(children).replace(/\n$/, '')}
-                style={a11yDark as any}
-                language={language}
-                PreTag="div"
-              />
-            ) : (
-              <code className={className}>
-                {children}
-              </code>
-            )
-          }
-        }}
-      />
+          }}
+        />
+      </div>
     </article>
   );
 };

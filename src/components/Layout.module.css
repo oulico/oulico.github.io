@@ -1,9 +1,8 @@
-.mainContent {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.tuiLayout {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.mainContentPadded {
-  padding-top: 60px;
+.mainContent {
+    /* This class is now just a semantic wrapper, no styles needed here */
 }
